@@ -11,7 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class WalletController {
-	
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String getRootCounter() {
+		return "Hello World From Root ELB 8090";
+	}
+
 	
 	@RequestMapping(value = "/ap1/v1/helloELB", method = RequestMethod.GET)
 	public String getCounter() {
